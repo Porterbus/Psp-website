@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - TORS Health Equipment Catalogue</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="header-container">
+            <h1>TORS Healthcare</h1>
+            <nav aria-label="Main Navigation">
+                <a href="#">Help</a>
+                <a href="#">Contact TORS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login-container">
+        <div class="login-card">
+            <h2>System Sign-In</h2>
+            <p>Enter your credentials to access the equipment catalogue.</p>
+
+            <form id="login-form" action="login_process.php" method="POST" novalidate>
+                
+                <div id="error-message" class="error-hidden" aria-live="polite"></div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-help">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                        <button type="button" id="toggle-password" aria-label="Show password">Show</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Log In</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
