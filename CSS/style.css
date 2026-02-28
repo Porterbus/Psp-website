@@ -1,0 +1,149 @@
+:root {
+    --primary-blue: #005A9C;
+    --dark-text: #1A1A1A;
+    --light-bg: #F4F7F6;
+    --white: #FFFFFF;
+    --focus-ring: #FFBF47;
+    --error-red: #D32F2F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a:focus, button:focus, input:focus {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+.top-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+.top-header a:hover {
+    text-decoration: underline;
+}
+
+.login-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-card {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card h2 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.login-card p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.password-wrapper {
+    display: flex;
+    position: relative;
+}
+
+#toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background: none;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 0.85rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #00447A;
+}
+
+.error-hidden {
+    display: none;
+}
+
+.error-visible {
+    display: block;
+    background-color: #FDECEA;
+    color: var(--error-red);
+    padding: 10px;
+    border-left: 4px solid var(--error-red);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
