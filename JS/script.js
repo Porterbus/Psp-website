@@ -33,5 +33,4 @@ document.addEventListener("DOMContentLoaded", function() {
             errorMessage.className = "error-hidden";
         }
     });
-
 });

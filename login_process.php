@@ -20,8 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $user['role'];
             $_SESSION['name'] = $user['full_name'];
 
-            echo "<h1>Login succesful! Welcome, " . $_SESSION['name'] . " (" . $_SESSION['role'] . ")</h1>";
-            // TODO: Replace echo with redirection code later
+            if ($_SESSION['role'] === 'Academic') {
+                header("Location: catalogue.php");
+            } elseif ($_SESSION['role'] === 'Planner') {
+                header("Location: planner_dashboard.php");
+            } else {
+                echo "Role dashboard not built yet!";
+            }
+            
+            exit();
         } else {
             echo "<h1>Error: Incorect password.</h1> <a href='index.html'>Try again</a>";
         }
